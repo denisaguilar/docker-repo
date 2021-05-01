@@ -1,7 +1,7 @@
 version: "2.1"
 services:
   qbittorrent:
-    image: ghcr.io/linuxserver/qbittorrent
+    image: linuxserver/qbittorrent
     container_name: qbittorrent
     environment:
       - PUID=1000
@@ -9,8 +9,8 @@ services:
       - TZ=Europe/London
       - WEBUI_PORT=8080
     volumes:
-      - /home/pi/torrents/config:/config
-      - /home/pi/torrents:/torrents
+      - /home/pi/nas/torrents/config:/config
+      - /home/pi/nas/torrents:/media/torrents
     ports:
       - 6881:6881
       - 6881:6881/udp
